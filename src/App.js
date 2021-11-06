@@ -1,11 +1,10 @@
 import './App.css';
 
 import { StateProvider } from './contexts/stateContext'
+import Calculator from './components/Calculator';
+import History from './components/History';
 
 
-import Header from './components/Header';
-import Menu from './components/Menu';
-import Body from './components/Body';
 
 
 const App = () => {
@@ -13,11 +12,8 @@ const App = () => {
     return (
         <StateProvider >
             <div className="container">
-                <Header />
-                <section>
-                    <Menu />
-                    <Body />
-                </section>
+                <Calculator/>
+                <History/>
             </div>
         </StateProvider>
     );

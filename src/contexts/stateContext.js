@@ -1,19 +1,14 @@
 import { createContext, useContext, useReducer, useEffect } from 'react';
 
-import ThemeReducer from '../reducers/ThemeReducer';
-import UserReducer from '../reducers/UserReducer';
-import Counter from '../reducers/Counter';
+import CalcReducer from '../reducers/CalcReducer';
 
 const initialState = {
-    theme: ThemeReducer(),
-    user: UserReducer(),
-    count: Counter()
+    calc: CalcReducer()
 }
 
 const MainReducer = (state, action) => ({
-    theme: ThemeReducer(state.theme, action),
-    user: UserReducer(state.user, action),
-    count: Counter(state.count, action)
+    
+    calc: CalcReducer(state.calc, action)
 });
 
 export const StateContext = createContext();
